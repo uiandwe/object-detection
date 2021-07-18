@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>photo list</title>
+    </head>
+
+    <body>
+        <!-- List of uploaded documents -->
+        {% if photos %}
+            All documents in the database:
+            <ul>
+                {% for photo in photos %}
+                    <li><a href="{{ photo.id }}">{{ photo.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No photos.</p>
+        {% endif %}
+    </body>
+</html>

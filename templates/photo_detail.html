@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>photo detail</title>
+</head>
+
+    <body>
+
+    {% if photo %}
+        <ul>
+            {% for tag in tags %}
+                <li>{{ tag }}</li>
+            {% endfor %}
+        </ul>
+        <div>
+            {{ filename }}
+        </div>
+
+        <img src="{{ static }}/media/photo/detect/{{ filename }}.jpg" height="500" width="500"/>
+
+        {% if photo.is_run_gun_model %}
+            <img src="{{ static }}/media/photo/detect/gun/{{ filename }}.jpg" height="500" width="500"/>
+        {% endif %}
+
+        {% if photo.is_run_fruit_model %}
+            <img src="{{ static }}/media/photo/detect/fruit/{{ filename }}.jpg" height="500" width="500"/>
+        {% endif %}
+
+        {% if photo.is_run_plant_model %}
+            <img src="{{ static }}/media/photo/detect/plant/{{ filename }}.jpg" height="500" width="500"/>
+        {% endif %}
+
+
+    {% else %}
+        <p>No photos.</p>
+    {% endif %}
+
+    </body>
+</html>
