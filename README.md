@@ -1,13 +1,14 @@
-#xylophone
-
-
 ## YOLO Photo Album
 
 YOLOv5 object detection을 활용한 포토 앨범 만들기
 
+[발표자료 - object_detection_with_yolo](object_detection_with_yolo.pdf)
+
+
 - 갤러리 뷰 사용
 
 ![](result.png)
+
 
 ## Run
 
